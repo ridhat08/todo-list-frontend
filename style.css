@@ -1,0 +1,105 @@
+/* Spesifikasi UI/UX: Layout dan Box Model */
+body {
+    font-family: Arial, sans-serif; /* Tipografi */
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+footer {
+    /* Ini akan menggeser teks ke tengah secara horizontal */
+    text-align: center; 
+    
+    /* Disarankan: Tambahkan sedikit padding vertikal */
+    padding: 20px 0; 
+    
+    /* Anda bisa menambahkan styling lain di sini */
+}
+
+main {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Menggunakan Flexbox untuk Form */
+#task-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+#add-btn {
+    padding: 10px 15px;
+    background-color: #50e3c2;
+    color: #333;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Styling Daftar Tugas */
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    /* Menggunakan Flexbox untuk setiap item */
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.task-item span {
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.completed span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.delete-btn {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Responsif Dasar */
+@media (max-width: 768px) {
+    main {
+        margin: 15px;
+        padding: 15px;
+    }
+    #task-form {
+        flex-direction: column; /* Pada mobile, tumpuk input dan tombol */
+        gap: 10px;
+    }
+    #task-input, #add-btn {
+        border-radius: 4px;
+    }
+}

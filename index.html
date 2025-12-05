@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Daftar Tugas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Daftar Tugas Harian 🗓️</h1>
+    </header>
+
+    <main>
+        <section class="add-task">
+            <form id="task-form">
+                <input type="text" id="task-input" placeholder="Tulis tugas baru..." required>
+                <button type="submit" id="add-btn">Tambah Tugas</button>
+            </form>
+        </section>
+
+        <section class="controls">
+            <label for="filter-select">Filter Status:</label>
+            <select id="filter-select">
+                <option value="all">Semua</option>
+                <option value="active">Aktif</option>
+                <option value="completed">Selesai</option>
+            </select>
+        </section>
+        
+        <section class="todo-list">
+            <h2>Daftar Tugas</h2>
+            <ul id="task-list">
+                </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aplikasi To-Do </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
